@@ -18,5 +18,6 @@ if ($ENV{ROS_VERSION} EQUAL "1")
 
   catkin_package(CATKIN_DEPENDS std_msgs message_runtime)
 else()
+  unset(CATKIN_INSTALL_INTO_PREFIX_ROOT)
   install(TARGETS)   # nothing to install
 endif()
